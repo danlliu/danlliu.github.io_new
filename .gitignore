@@ -1,0 +1,4 @@
+css/*.css
+.idea/
+.DS_STORE
+node_modules

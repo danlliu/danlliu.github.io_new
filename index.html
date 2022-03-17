@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head class="no-js" lang="en">
+    <meta charset="utf-8">
+    <title>danlliu</title>
+
+    <link rel="stylesheet" href="css/static/foundation.min.css"/>
+    <link rel="stylesheet" href="css/index.css"/>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+<noscript>
+    This website uses JavaScript for animations! Don't trust the site to say it's safe though: check out the source code
+    of this page <a href="https://github.com/danlliu/danlliu.github.io">here</a>!
+</noscript>
+<div id="main-grid">
+    <div class="grid-y" id="gridy">
+        <div class="cell large-2 grid-x">
+            <section class="cell shown" id="nameplate">
+                <h1>daniel liu</h1>
+            </section>
+        </div>
+        <div class="cell large-3 grid-x">
+            <section class="terminal cell shown large-4" id="hello-world">
+                <h1 aria-hidden="true" class="terminal terminal-prompt prompt-shown">$ </h1>
+                <p aria-label="Welcome to my website!" class="terminal"></p>
+            </section>
+            <section class="cell large-8" id="technical-experience">
+                <div class="grid-x">
+                    <div class="cell large-6">
+                        <h1>skills &amp; technical experience</h1>
+                    </div>
+                    <div class="cell large-6">
+                        <div id="text-scrambler"></div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div class="cell large-4 grid-x">
+            <section class="cell large-6" id="education">
+                <h1>education</h1>
+            </section>
+            <section class="cell large-6" id="awards">
+                <h1>awards &amp; achievements</h1>
+            </section>
+        </div>
+        <div class="cell large-3 grid-x">
+            <section class="cell large-3" id="connect">
+                <h1>let's connect</h1>
+            </section>
+            <section class="cell large-9" id="more-about-me">
+                <h1>more about me</h1>
+            </section>
+        </div>
+    </div>
+</div>
+
+<script src="js/src/jquery.js"></script>
+<script src="js/src/what-input.js"></script>
+<script src="js/src/foundation.min.js"></script>
+<script>$(document).foundation();</script>
+<script src="js/index.js"></script>
+</body>
+</html>
