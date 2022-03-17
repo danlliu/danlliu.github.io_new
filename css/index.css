@@ -10,15 +10,15 @@ h4,
 h5,
 h6,
 p {
-  margin: 0;
-  padding: 0.5rem;
+  padding: 0.5rem 0.5rem 0.5rem 1rem;
 }
 h1 {
-  font-size: 36px !important;
+  font-size: 48px !important;
   font-weight: bold;
 }
 h2 {
   font-size: 30px !important;
+  font-weight: bold;
 }
 h3 {
   font-size: 25px !important;
@@ -32,6 +32,12 @@ h5 {
 h6 {
   font-size: 16px !important;
 }
+.w-100 {
+  width: 100%;
+}
+.card {
+  border: none;
+}
 section {
   opacity: 0;
   transition: opacity 0.5s ease;
@@ -40,18 +46,68 @@ section.shown {
   opacity: 1;
   border: 1px solid #eeeeee;
 }
+.large-icon {
+  font-size: 24px;
+}
+.radius {
+  border-radius: 4px;
+}
 #main-grid {
   margin: 1vh;
 }
 #gridy {
   height: 98vh;
 }
+#skip-animation-button {
+  position: fixed;
+  bottom: 1rem;
+  left: 45vw;
+  width: 10vw;
+  height: 5vh;
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+#skip-animation-button.hidden {
+  opacity: 0;
+}
+#nameplate {
+  background-color: #333333;
+}
+#nameplate p.subtitle {
+  color: #bbbbbb;
+  font-size: 18px;
+}
 .terminal {
-  background-color: #111111 !important;
-  color: #dddddd !important;
+  background-color: #111111;
+  color: #dddddd;
   font-family: 'Consolas', monospace;
   font-weight: normal;
 }
 .terminal-prompt.prompt-shown:after {
   content: "_";
+}
+#technical-experience {
+  background-color: #222222;
+}
+#education {
+  background-color: #333333;
+}
+#education h3 {
+  background-color: #555555;
+  color: #ffcb05;
+}
+#education h3 small {
+  color: #00276c;
+}
+#awards {
+  background-color: #444444;
+}
+#connect {
+  background-color: #222222;
+}
+#connect a {
+  font-size: 24px;
+}
+#more-about-me {
+  background-color: #333333;
 }
