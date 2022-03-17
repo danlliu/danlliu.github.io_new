@@ -34,6 +34,7 @@ function animateTerminal() {
         if (!DO_ANIMATION) { clearInterval(intervalID); return; }
         if (contents === '$ hello world') {
             input.removeClass('terminal-prompt');
+            input.removeClass('prompt-shown');
             setTimeout(() => {
                 output.html('Welcome to my website!<br>Process finished with exit code HELLO');
             }, 300);
@@ -49,12 +50,82 @@ function animateTerminal() {
 
 function skipAnimation() {
     DO_ANIMATION = false;
-    $('h2.terminal').html('$ hello world')
+    let input = $('h2.terminal');
+    input.html('$ hello world')
+    input.removeClass('terminal-prompt');
+    input.removeClass('prompt-shown');
     $('p.terminal').html('Welcome to my website!<br>Process finished with exit code HELLO');
     for (let section of SECTIONS) {
         section.addClass('shown');
     }
+    $('#skip-animation-button').addClass('hidden');
 }
 
 animateBlinker();
 animateTerminal();
+
+/* Text Scrambler */
+
+const ROWS = 8;
+const COLS = 32;
+const SCRAMBLER_WORDS = [
+    'programmer',
+    'coder',
+    'developer',
+    'innovator',
+    'researcher',
+    'engineer',
+    'scientist',
+    'creator',
+    'designer',
+    'chemist'
+]
+
+let scrambler = $('#text-scrambler');
+const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890';
+
+function randomString(length) {
+    let result = '';
+    for (let i = 0; i < length; i++) {
+        result += characters[Math.floor(Math.random() * characters.length)];
+    }
+    return result;
+}
+
+function init_scrambler() {
+    let innerHTML = '';
+    for (let i = 0; i < ROWS; i++) {
+        innerHTML += `<p>${randomString(COLS)}</p>`;
+    }
+    scrambler.html(innerHTML);
+}
+
+function display_word(word) {
+    let row = Math.floor(Math.random() * (ROWS - 2)) + 1;
+    let col = Math.floor(Math.random() * (COLS - word.length - 2)) + 1;
+
+    let innerHTML = '';
+    for (let i = 0; i < ROWS; i++) {
+        if (i !== row) {
+            innerHTML += `<p>${randomString(COLS)}</p>`;
+        } else {
+            innerHTML += `<p>${randomString(col)}<span>${word}</span>${randomString(COLS - word.length - col)}</p>`;
+        }
+    }
+
+    let iterations = 0;
+    let intervalID = setInterval(() => {
+        if (iterations === 10) {
+            scrambler.html(innerHTML);
+            clearInterval(intervalID);
+        } else {
+            init_scrambler();
+            ++iterations;
+        }
+    }, 50);
+}
+
+init_scrambler();
+setInterval(() => {
+    display_word(SCRAMBLER_WORDS[Math.floor(Math.random() * SCRAMBLER_WORDS.length)]);
+}, 5000)
