@@ -41,6 +41,8 @@ jobs:
           done
       - name: Push compiled CSS
         run: |
+          git config --global user.name 'Daniel Liu'
+          git config --global user.email '66093915+danlliu@users.noreply.github.com'
           git add -f css/*.css
           git commit -m "GitHub Actions: Compiled LESS to CSS."
           git push
