@@ -1,5 +1,12 @@
 
-const SECTIONS = [$('#technical-experience'), $('#education'), $('#awards'), $('#connect'), $('#more-about-me')]
+let SECTIONS = [
+    $('#education'),
+    $('#technical-experience'),
+    $('#projects'),
+    $('#connect'),
+    $('#more-about-me'),
+    $('#credits')
+]
 let DO_ANIMATION = true;
 
 function animateBlinker() {
@@ -12,10 +19,15 @@ function animateBlinker() {
 
 function animateSections() {
     if (!DO_ANIMATION) { return; }
+    // https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array
+    let shuffled = SECTIONS
+        .map(value => ({value, sort: Math.random()}))
+        .sort((a, b) => a.sort - b.sort)
+        .map(({value}) => value);
     let i = 0;
     let intervalID = setInterval(() => {
         if (!DO_ANIMATION) {clearInterval(intervalID);return;}
-        SECTIONS[i++].addClass('shown');
+        shuffled[i++].addClass('shown');
         if (i === SECTIONS.length) {
             clearInterval(intervalID);
             $('#skip-animation-button').addClass('hidden');
@@ -25,8 +37,8 @@ function animateSections() {
 
 function animateTerminal() {
     if (!DO_ANIMATION) { return; }
-    const input = $('h2.terminal')
-    const output = $('p.terminal')
+    const input = $('#hello-world h2.terminal')
+    const output = $('#hello-world p.terminal')
 
     // typing 1: "hello world"
     let contents = '$ ';
@@ -50,15 +62,16 @@ function animateTerminal() {
 
 function skipAnimation() {
     DO_ANIMATION = false;
-    let input = $('h2.terminal');
+    let input = $('#hello-world h2.terminal');
     input.html('$ hello world')
     input.removeClass('terminal-prompt');
     input.removeClass('prompt-shown');
-    $('p.terminal').html('Welcome to my website!<br>Process finished with exit code HELLO');
+    $('#hello-world p.terminal').html('Welcome to my website!<br>Process finished with exit code HELLO');
     for (let section of SECTIONS) {
         section.addClass('shown');
     }
     $('#skip-animation-button').addClass('hidden');
+    display_word('programmer');
 }
 
 animateBlinker();
@@ -67,7 +80,7 @@ animateTerminal();
 /* Text Scrambler */
 
 const ROWS = 8;
-const COLS = 32;
+const COLS = 28;
 const SCRAMBLER_WORDS = [
     'programmer',
     'coder',
@@ -78,7 +91,10 @@ const SCRAMBLER_WORDS = [
     'scientist',
     'creator',
     'designer',
-    'chemist'
+    'chemist',
+    'teacher',
+    'musician',
+    'gamer'
 ]
 
 let scrambler = $('#text-scrambler');
@@ -127,5 +143,8 @@ function display_word(word) {
 
 init_scrambler();
 setInterval(() => {
+    if (Math.random() < 0.0001) {
+        display_word('made by danlliu');
+    }
     display_word(SCRAMBLER_WORDS[Math.floor(Math.random() * SCRAMBLER_WORDS.length)]);
 }, 5000)

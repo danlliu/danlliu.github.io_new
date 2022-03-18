@@ -1,0 +1,3 @@
+css/static/foundation* linguist-vendored
+js/src/* linguist-vendored
+css/*.css -linguist-detectable

@@ -22,9 +22,26 @@
 <div id="main-grid">
     <div class="grid-y" id="gridy">
         <div class="cell large-2 grid-x">
-            <section class="cell shown" id="nameplate">
+            <section class="cell large-9 shown" id="nameplate">
                 <h1>daniel liu</h1>
                 <p class="subtitle">programmer. chemist. innovator.</p>
+            </section>
+            <section class="cell large-3" id="connect">
+                <h2>let's connect</h2>
+                <ul class="vertical menu">
+                    <li><a href="mailto:danlliu@umich.edu" rel="noopener noreferrer" target="_blank">
+                        <img alt='' aria-hidden="true" width="18" height="18" src="assets/webicon-mail.svg"/>
+                        danlliu@umich.edu
+                    </a></li>
+                    <li><a href="https://linkedin.com/in/danlliu" rel="noopener noreferrer" target="_blank">
+                        <img alt='' aria-hidden="true" width="18" height="18" src="assets/webicon-linkedin.svg"/>
+                        LinkedIn: danlliu
+                    </a></li>
+                    <li><a href="https://github.com/danlliu" rel="noopener noreferrer" target="_blank">
+                        <img alt='' aria-hidden="true" width="18" height="18" src="assets/webicon-github.svg"/>
+                        GitHub: danlliu
+                    </a></li>
+                </ul>
             </section>
         </div>
         <div class="cell large-3 grid-x">
@@ -32,53 +49,95 @@
                 <h2 aria-hidden="true" class="terminal terminal-prompt prompt-shown">$ </h2>
                 <p aria-label="Welcome to my website!" class="terminal"></p>
             </section>
-            <section class="cell large-8" id="technical-experience">
-                <div class="grid-x">
-                    <div class="cell large-8">
-                        <h2>skills &amp; technical experience</h2>
-                        <p></p>
-                    </div>
-                    <div class="cell large-4">
-                        <div id="text-scrambler"></div>
-                    </div>
-                </div>
-            </section>
-        </div>
-        <div class="cell large-4 grid-x">
-            <section class="cell large-6" id="education">
+            <section class="cell large-8" id="education">
                 <h2>education</h2>
-                <h3 class="small-11"><i class="small-1 fi-book-bookmark large-icon"></i> University of Michigan <small>Ann Arbor, MI</small></h3>
+                <h3 class="small-11"><i class="small-1 white fi-book-bookmark large-icon"></i> University of Michigan <small>Ann Arbor, MI</small></h3>
                 <p>
-                    B.S. Computer Science, College of LS&amp;A<br/>
-                    B.S.Chem, College of LS&amp;A<br/>
+                    B.S.Chem, B.S. Computer Science, College of LS&amp;A<br/>
                     B.B.A., Ross School of Business<br/><br/>
                     <a class="button primary radius" href="education.html">full education</a>
                 </p>
             </section>
-            <section class="cell large-6" id="awards">
-                <h2>awards &amp; achievements</h2>
+        </div>
+        <div class="cell large-4 grid-x">
+            <section class="cell large-6" id="technical-experience">
+                <div class="grid-x">
+                    <div class="cell large-6">
+                        <h2>skills &amp; experience</h2>
+                        <p>
+                            Throughout my time at Michigan, I've been involved in a wide range of activities, such as
+                            research, software development, teaching, and more!<br/><br/>
+                            <a class="button primary radius" href="experience.html">learn more</a>
+                        </p>
+                    </div>
+                    <div class="cell large-6">
+                        <div id="text-scrambler"></div>
+                    </div>
+                </div>
+            </section>
+            <section class="cell large-6" id="projects">
+                <h2>personal projects</h2>
+                <p class="no-vert-padding"><b>featured:</b></p>
+                <div class="grid-x">
+                    <!-- Featured Projects -->
+                    <div class="cell medium-6 card">
+                        <div class="card-divider">
+                            <h3><a href="https://github.com/danlliu/danlliu.github.io">danlliu.github.io</a></h3>
+                        </div>
+                        <div class="card-content">
+                            <p>
+                                My own personal website, built from scratch.<br/>
+                                Styled with the Foundation framework and custom LESS.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="cell medium-6 card">
+                        <div class="card-divider">
+                            <h3>gpqis</h3>
+                        </div>
+                        <div class="card-content">
+                            <p>
+                                Implemented a genetic programming algorithm in Python to search
+                                for indicators correlated to stock performance.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <p style="margin: 0;"><a class="button primary radius" href="projects.html">see all</a></p>
             </section>
         </div>
         <div class="cell large-3 grid-x">
-            <section class="cell large-3" id="connect">
-                <h2>let's connect</h2>
-                <ul class="vertical menu">
-                    <li><a href="mailto:danlliu@umich.edu" rel="noopener noreferrer" target="_blank">
-                        <img alt='' aria-hidden="true" width="20" height="20" src="assets/webicon-mail.svg"/>
-                        danlliu@umich.edu
-                    </a></li>
-                    <li><a href="https://linkedin.com/in/danlliu" rel="noopener noreferrer" target="_blank">
-                        <img alt='' aria-hidden="true" width="20" height="20" src="assets/webicon-linkedin.svg"/>
-                        LinkedIn: danlliu
-                    </a></li>
-                    <li><a href="https://github.com/danlliu" rel="noopener noreferrer" target="_blank">
-                        <img alt='' aria-hidden="true" width="20" height="20" src="assets/webicon-github.svg"/>
-                        GitHub: danlliu
-                    </a></li>
-                </ul>
-            </section>
             <section class="cell large-9" id="more-about-me">
-                <h2>more about me</h2>
+                <h2>about me</h2>
+                <p>My name is Daniel Liu, and I'm a student at the University of Michigan. I'm passionate about using
+                interdisciplinary thinking to make the world a better place.</p>
+                <nav id="nav">
+                    <div class="grid-x">
+                        <a class="cell auto button primary">homepage</a>
+                        <a class="cell auto button primary">education</a>
+                        <a class="cell auto button primary">personal projects</a>
+                        <a class="cell auto button alert">work experience</a>
+                        <a class="cell auto button alert">research experience</a>
+                        <a class="cell auto button success">get in touch</a>
+                        <a class="cell auto button success">résumé and CV</a>
+                    </div>
+                </nav>
+            </section>
+            <section class="cell large-3" id="credits">
+                <p class="terminal">
+                    Designed and developed by Daniel Liu<br/>
+                    <a rel="noopener noreferrer" target="_blank" href="https://github.com/danlliu/danlliu.github.io">
+                        <i class="fi-social-github white"></i>
+                        Source Code
+                    </a><br/>
+                    <small>
+                        &copy; 2022 Daniel Liu.<br/>
+                        Website content created with HTML5.<br/>
+                        Styled with the <a href="https://get.foundation/index.html">Foundation</a> framework, with custom
+                        LESS used for additional stying.<br/>
+                        Animations performed using JavaScript.
+                    </small>
+                </p>
             </section>
         </div>
     </div>

@@ -9,8 +9,8 @@ body {
 // general styles
 
 h1,h2,h3,h4,h5,h6,p {
-  // margin: 0 0 0 0.5rem;
-  padding: 0.5rem 0.5rem 0.5rem 1rem;
+  margin: 0 0 0 0;
+  padding: 0.5rem 1rem 0.5rem 1rem;
 }
 
 h1 {
@@ -38,6 +38,11 @@ h6 {
   width: 100%;
 }
 
+.no-vert-padding {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
 .card {
   border: none;
 }
@@ -54,6 +59,9 @@ section.shown {
 
 .large-icon {
   font-size: 24px;
+}
+
+.white {
   color: #dddddd;
 }
 
@@ -64,11 +72,12 @@ section.shown {
 // big grid
 
 #main-grid {
-  margin: 1vh;
+  margin: 1vh 1vw 1vh 1vw;
 }
 
 #gridy {
   height: 98vh;
+  width: 98vw;
 }
 
 // skip animation button
@@ -99,6 +108,23 @@ section.shown {
   font-size: 18px;
 }
 
+// connect
+
+#connect {
+  background-color: #222222;
+}
+
+#connect a {
+  font-size: 16px;
+  padding: 0.5rem;
+  // color: #92d5e6;
+  // transition: color 0.25s ease;
+}
+
+#connect a:hover {
+  // color: #3f88c5;
+}
+
 // hello world panel
 
 .terminal {
@@ -114,15 +140,38 @@ section.shown {
   }
 }
 
+// education
+
+#education {
+  background-color: #555555;
+}
+
+#education p {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+#education h3 {
+  background-color: #666666;
+  color: #ffcb05;
+  font-weight: bold;
+}
+
+#education h3 small {
+  color: #00276c;
+  font-weight: bold;
+}
+
 // technical experience
 
 #technical-experience {
-  background-color: #222222;
+  background-color: #333333;
 }
 
 #text-scrambler {
   height: 90%;
-  margin: 5% 0 5% 0;
+  width: 270px;
+  margin: 5% auto 5% auto;
 }
 
 #text-scrambler p {
@@ -137,47 +186,71 @@ section.shown {
   font-weight: bold;
 }
 
-// education
+// projects
 
-#education {
-  background-color: #555555;
-}
-
-#education h3 {
-  background-color: #666666;
-  color: #ffcb05;
-  font-weight: bold;
-}
-
-#education h3 small {
-  color: #00276c;
-  font-weight: bold;
-}
-
-// awards
-
-#awards {
-  background-color: #333333;
-}
-
-// connect
-
-#connect {
+#projects {
   background-color: #222222;
 }
 
-#connect a {
-  font-size: 16px;
-  // color: #92d5e6;
-  // transition: color 0.25s ease;
+#projects div.card {
+  background-color: inherit;
+  color: inherit;
+  padding: 0.5rem;
+  margin-bottom: 0;
+  border-radius: 32px;
 }
 
-#connect a:hover {
-  // color: #3f88c5;
+#projects div.card-divider {
+  background-color: #666666;
+  padding: 0.25rem;
+}
+
+#projects div.card-divider * {
+  color: #dddddd !important;
+}
+
+#projects div.card-divider a {
+  text-decoration: underline;
+}
+
+#projects div.card-content {
+  background-color: #444444;
+  font-size: smaller;
 }
 
 // more about me
 
 #more-about-me {
+  position: relative;
   background-color: #444444;
+  padding-bottom: 56px;
+}
+
+#more-about-me nav {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  margin-bottom: 0;
+}
+
+#more-about-me nav div {
+  height: 56px;
+}
+
+#more-about-me nav a {
+  margin-bottom: 0;
+  text-align: center;
+  line-height: 56px;
+  padding: 0 1rem;
+}
+
+// credits
+
+#credits {
+  background-color: #111111;
+}
+
+#credits p {
+  margin: 0;
 }
